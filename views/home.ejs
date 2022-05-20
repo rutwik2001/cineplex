@@ -1,0 +1,80 @@
+<%- include("partials/header"); -%>
+
+    
+
+    <h1 style="color: #FF7700;  ">New Videos</h1>
+</br>
+    
+    <%if(songs.length == 0){%>
+        <h1>No Videos</h1>
+    <%} else {%>
+
+    
+    <%var i = 0%>
+    <% songs.forEach(function(song){ i++ %>
+
+
+
+        <div class="container search-song">
+            <div style="font-size: 17px" class="row align-items-start">
+                <div class="col-1">
+                    <b class="text">
+                        <%=i%>
+                    </b>
+                </div>
+                <div class="col-2">
+                    <b class="text">
+                        <%=song.name%>
+                    </b>
+                </div>
+                <div class="col-3 text">
+                    <a class=""href="/videos/<%=song.numId%>"><b class="text">
+                        <i class="fas fa-play "></i>
+                    </b></a>
+                </div>
+                
+        
+            </div>
+        
+        
+        </div>
+    </br>
+
+        
+    
+        <!-- <h1>
+            <%=song.name%>
+        </h1>
+        <h1>
+            <%=song.numId%>
+        </h1>
+        <h1>
+            <%=song.location%>
+        </h1>
+        <h1>
+            <%=song.likes%>
+        </h1>
+        <h1>
+            <%=song.plays%>
+        </h1>
+        <h1>
+            <%=song.albumId%>
+        </h1> -->
+        
+    
+    
+        <% }) %>
+
+    <%}%>
+    </br>
+    </br>
+
+        
+    
+    
+    
+            
+    
+                    
+
+            <%- include("partials/footer"); -%>
